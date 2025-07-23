@@ -83,8 +83,8 @@ python scripts/solve_prob_batch.py pddl/picknplace/domains/domain-akr.pddl pddl/
 
 ## 🧪 Reproducibility
 
-* Tested on **Ubuntu 20.04**
-* Python version: 3.8+
+* Tested on **Ubuntu 22.04**
+* Python version: 3.10+
 
 ---
 
@@ -94,6 +94,7 @@ python scripts/solve_prob_batch.py pddl/picknplace/domains/domain-akr.pddl pddl/
 AKR-PDDL/
 ├── downward/             # fast downward pddl solver
 ├── pddl/                 # pddl domain and problem files
+├── scripts/              # pddl problem file generator
 ├── LICENSE
 └── README.md
 ```
