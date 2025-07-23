@@ -15,7 +15,7 @@ We present a Sequential Mobile Manipulation Planning (SMMP) framework that can s
 
 ## 📦 Installation
 
-Tested on **Ubuntu 20.04**.
+Tested on **Ubuntu 22.04**.
 
 ### 1. Clone the repository and its submodules
 
@@ -47,7 +47,27 @@ cd ..
 
 To run the main experiment, use the following command:
 
+#### Efficiency Improvement in AKR Domain
+
+You can use [scripts/gen_problem.py](scripts/gen_problem.py) to automatically generate a batch of PDDL pick-and-place problems. More details please refer to the script.
+
+```bash
+python scripts/gen_problem.py
+```
+
+Next, you can use the following command to solve all the generated problems regarding normal domain and ARK domain.
+
+```bash
+python scripts/solve_prob_batch.py <domain-file> <problem-file-dir> <output-dir>
+```
+
+For example,
+```bash
+python scripts/solve_prob_batch.py pddl/picknplace/domains/domain-akr.pddl pddl/picknplace/problems pddl/picknplace/results
+```
+
 #### SMMP task in simulated household environment
+
 ```bash
 ./downward/fast-downward.py pddl/smmp-simulation/domain.pddl pddl/smmp-simulation/problem.pddl --search "lazy_greedy([ff()], preferred=[ff()])"
 ```
